@@ -21,6 +21,9 @@ import icon from 'astro-icon'
 //   })
 // } // должен убирать type="module" из тега скрипт
 
+// счетчик для генерации уникальных id в svgo
+let svgoPrefixIdsCount = 0
+
 // https://astro.build/config
 export default defineConfig({
   devToolbar: { enabled: false },
@@ -41,9 +44,16 @@ export default defineConfig({
     icon({
       svgoOptions: {
         plugins: [
-          'preset-default'
-        ],
-      },
+          'preset-default',
+          {
+            name: 'prefixIds',
+            params: {
+              delim: '',
+              prefix: () => `id-${(svgoPrefixIdsCount++)}`
+            }
+          }
+        ]
+      }
     })
   ],
   vite: {

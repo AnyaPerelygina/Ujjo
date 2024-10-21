@@ -1,0 +1,28 @@
+---
+interface Props {
+  list: {
+    text: string
+    href: string
+  }[]
+}
+
+const { list } = Astro.props
+---
+
+<nav class="nav">
+  <ul class="nav__list">
+    {
+      list.map((item) => (
+        <li class="nav__item">
+          <a
+            href={item.href}
+            set:html={item.text}
+            target="_blank"
+            class="nav__link"
+            data-close-menu
+          />
+        </li>
+      ))
+    }
+  </ul>
+</nav>

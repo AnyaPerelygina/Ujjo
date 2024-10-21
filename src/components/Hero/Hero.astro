@@ -1,0 +1,44 @@
+---
+import Container from '@components/Container/Container'
+import Picture from '@ui/Picture/Picture'
+import MarqueeReverse from '@components/Marquee/Marquee'
+---
+
+<section class="hero">
+  <Container>
+    <div class="hero__wrapper-left">
+      <div class="hero__ujjo-small">
+        <div class="hero__ujjo-textBlack">
+          <Picture name="text-ujjo-small" alt="" width={656} type="svg" />
+        </div>
+        <div class="hero__ujjo-textWhite">
+          <Picture name="text-white-small" alt="" width={558} type="svg" />
+        </div>
+      </div>
+      <MarqueeReverse reverse={true} />
+      <div class="hero__img">
+        <Picture
+          name="bottle-on-the-table"
+          alt="Hot sauce on the table."
+          formats={['webp']}
+          width={657}
+          type="png"
+        />
+      </div>
+    </div>
+    <div class="hero__wrapper-right">
+      <div class="hero__text">
+        <p>The first hot sauce made for coffee</p>
+      </div>
+      <div class="hero__img">
+        <Picture
+          name="hot-sauce"
+          alt="Hot sauce."
+          formats={['webp']}
+          width={656}
+          type="png"
+        />
+      </div>
+    </div>
+  </Container>
+</section>

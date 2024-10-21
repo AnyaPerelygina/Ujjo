@@ -1,20 +1,20 @@
 ---
-import { Icon } from "astro-icon/components";
-import type { HTMLTag, Polymorphic } from "astro/types";
+import { Icon } from 'astro-icon/components'
+import type { HTMLTag, Polymorphic } from 'astro/types'
 
 type Props<Tag extends HTMLTag> = Polymorphic<
   { as: Tag } & {
-    text?: string;
-    className?: string;
-    mods?: string[];
-    size?: "xl" | "lg" | "md" | "sm" | "xs";
-    icon?: string;
-    iconPosBefore?: boolean;
+    text?: string
+    className?: string
+    mods?: string[]
+    size?: 'xl' | 'lg' | 'md' | 'sm' | 'xs'
+    icon?: string
+    iconPosBefore?: boolean
   }
->;
+>
 
 const {
-  as: Tag = "button",
+  as: Tag = 'button',
   className,
   text,
   mods,
@@ -22,15 +22,15 @@ const {
   icon,
   iconPosBefore,
   ...props
-} = Astro.props;
+} = Astro.props
 ---
 
 <Tag
   class:list={[
-    "button",
-    size ? `button--${size}` : "",
+    'button',
+    size ? `button--${size}` : '',
     mods?.map((el: string) => `button--${el}`),
-    className,
+    className
   ]}
   {...props}
 >

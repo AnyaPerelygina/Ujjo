@@ -1,14 +1,42 @@
 .header {
-  display: flex;
-  align-items: center;
-
   width: 100%;
-  height: 80px;
+  padding: 0 size(20);
+
+  .container {
+    height: size(112);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    border: size(1) solid var(--color-black);
+  }
 
   &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: size(199);
+    height: size(70);
+
     svg {
-      width: 170px;
-      height: 68px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__button {
+    padding: size(15) size(65);
+
+    &:first-child {
+      margin-left: size(23);
+    }
+
+    &:last-child {
+      margin-right: size(23);
     }
   }
 }

@@ -26,6 +26,14 @@ html {
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
   scroll-behavior: smooth;
+
+  @include vp-1023 {
+    font-size: size-html($vp-768);
+  }
+
+  @include vp-767 {
+    font-size: size-html($vp-320);
+  }
 }
 
 body {
@@ -42,19 +50,38 @@ main {
   min-width: 100%;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
 a {
+  color: inherit;
   text-decoration: none;
+  cursor: pointer;
+
+  @include hover-focus {
+    opacity: 0.64;
+  }
 }
 
 img,
 video {
   display: block;
   max-width: 100%;
+  width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 textarea {
   resize: none;
+}
+
+p {
+  margin: 0;
 }
 
 // chrome autofill background removal
@@ -73,6 +100,7 @@ input:-webkit-autofill {
 input,
 textarea {
   border-radius: 0;
+  cursor: text;
 
   &::placeholder {
     opacity: 1;
@@ -85,6 +113,7 @@ textarea {
 
 select {
   border-radius: 0;
+  cursor: pointer;
 }
 
 // ie11 X removal
@@ -133,6 +162,11 @@ input:matches([type="email"],
 [type="text"],
 [type="url"]) {
   appearance: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
 
 button,

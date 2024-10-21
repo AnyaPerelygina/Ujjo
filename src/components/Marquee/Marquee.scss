@@ -1,0 +1,69 @@
+.marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    column-gap: size(50);
+    padding: size(23) 0;
+
+    font-size: size(17);
+    line-height: size(26);
+    padding-left: size(50);
+    text-transform: uppercase;
+
+    animation-name: marquee-moving;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    border-top: size(1) solid var(--color-black);
+    border-bottom: size(1) solid var(--color-black);
+  }
+
+  &__icon {
+    width: size(68);
+    height: size(31);
+  }
+
+  &__text--reverse {
+    animation-name: marquee-moving-reverse;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  &__text-wrapper--reverse {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-moving {
+  0% {
+    transform: translateZ(0) translateX(0);
+  }
+
+  100% {
+    transform: translateZ(0) translateX(-100%);
+  }
+}
+
+@keyframes marquee-moving-reverse {
+  0% {
+    transform: translateZ(0) translateX(0);
+  }
+
+  100% {
+    transform: translateZ(0) translateX(100%);
+  }
+}

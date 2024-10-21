@@ -1,0 +1,14 @@
+.nav {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: size(50);
+  }
+
+  &__link {
+    display: grid;
+    place-content: center;
+    width: size(144);
+  }
+}

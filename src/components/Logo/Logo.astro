@@ -1,0 +1,17 @@
+---
+import { Icon } from 'astro-icon/components'
+interface Props {
+  page?: string
+}
+const { page = '' } = Astro.props
+const LogoTag = page === 'index' ? 'span' : 'a'
+const href = page === 'index' ? null : 'index.html'
+---
+
+<LogoTag
+  class="logo"
+  href={href}
+  aria-label={href ? 'Return to main page.' : null}
+>
+  <Icon name="logo" />
+</LogoTag>

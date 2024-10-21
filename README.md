@@ -32,7 +32,6 @@
 │   ├── pages/
 │   │   ├── index.astro
 │   │   ├── sitemap.astro
-│   │   └── ui-kit.astro
 │   ├── styles/
 │   │   ├── components/
 │   │   ├── global/
