@@ -1,0 +1,20 @@
+---
+import Container from "@components/Container/Container";
+import myImage from "@images/hot-sauce.png";
+import MainLayout from "@layouts/Main/Main";
+import { Picture } from "astro:assets";
+---
+
+<MainLayout title="Главная">
+  <Container>
+    <Picture
+      src={myImage}
+      alt="Example image."
+      quality={"high"}
+      formats={["webp"]}
+      fallbackFormat="jpg"
+      width={800}
+      densities={[2]}
+    />
+  </Container>
+</MainLayout>
