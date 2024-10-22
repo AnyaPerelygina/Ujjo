@@ -1,0 +1,92 @@
+---
+import Container from '@components/Container/Container'
+import { Icon } from 'astro-icon/components'
+import MarqueeReverse from '@components/Marquee/Marquee'
+import Card from '@components/Card/Card'
+
+interface ImageProps {
+  path: string
+  name: string
+  alt: string
+  width: number
+  height: number
+  type: 'png' | 'jpg'
+  webp: boolean
+}
+
+interface Item {
+  description: string
+  title: string
+  image: ImageProps
+}
+
+const list: Item[] = [
+  {
+    description: 'tangy and tingly',
+    title: 'LIGHT ROAST BLEND',
+    image: {
+      path: './images/light-roast-blend.png',
+      name: 'light-roast-blend',
+      alt: 'Image light roast blend.',
+      width: 390,
+      height: 441,
+      type: 'png',
+      webp: true
+    }
+  },
+  {
+    description: 'light & dark roast',
+    title: 'UJJO SAMPLER PACK',
+    image: {
+      path: './images/ujjo-samper-pack.png',
+      name: 'ujjo-samper-pack',
+      alt: 'Image ujjo samper pack.',
+      width: 390,
+      height: 441,
+      type: 'png',
+      webp: true
+    }
+  },
+  {
+    description: 'tangy and tingly',
+    title: 'DARK ROAST BLEND',
+    image: {
+      path: './images/dark-roast-blend.png',
+      name: 'dark-roast-blend',
+      alt: 'Image dark roast blend.',
+      width: 390,
+      height: 441,
+      type: 'png',
+      webp: true
+    }
+  }
+]
+---
+
+<section class="catalog">
+  <Container>
+    <div class="catalog__motto">
+      <Icon size={225} name="icon-scorpio" />
+      <p>Throw some lava in&nbsp;your&nbsp;java</p>
+      <Icon size={225} name="icon-scorpio" />
+    </div>
+    <div>
+      <div class="catalog__icons">
+        <Icon size={25} name="icon-fire-small" />
+        <Icon size={35} name="icon-fire-big" />
+        <Icon size={35} name="icon-fire-big" />
+        <Icon size={25} name="icon-fire-small" />
+      </div>
+      <ul class="catalog__list">
+        {
+          list.map((item) => (
+            <li class="catalog__item">
+              <Card description={item.description} title={item.title} image={item.image} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <MarqueeReverse reverse={true} />
+  </Container>
+</section>

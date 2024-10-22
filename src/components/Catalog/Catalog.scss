@@ -1,0 +1,39 @@
+.catalog {
+  padding: 0 size(20);
+
+  &__motto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    padding: size(65) size(33) size(58);
+
+    border-right: size(1) solid var(--color-black);
+    border-bottom: size(1) solid var(--color-black);
+    border-left: size(1) solid var(--color-black);
+
+    p {
+      font-size: size(65);
+      line-height: size(73);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    svg {
+      min-width: size(225);
+      height: size(156);
+    }
+
+    svg:last-child {
+      transform: scaleX(-1);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}

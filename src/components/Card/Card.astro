@@ -1,0 +1,17 @@
+---
+import Picture, { type Props as TypeImage } from '@ui/Picture/Picture'
+
+interface Props {
+  description: string
+  title: string
+  image: TypeImage
+}
+
+const { title, description, image } = Astro.props
+---
+
+<div class="card">
+  <p>{description}</p>
+  <span class="card__title">{title}</span>
+  <Picture {...image} />
+</div>
