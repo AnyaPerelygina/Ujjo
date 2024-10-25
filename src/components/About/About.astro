@@ -1,0 +1,74 @@
+---
+import Container from '@components/Container/Container'
+import Title from '@ui/Title/Title'
+import Picture from '@ui/Picture/Picture'
+import MarqueeReverse from '@components/Marquee/Marquee'
+---
+
+<section class="about">
+  <Container>
+    <div class="about__img">
+      <Picture
+        name="bottle-with-cup"
+        alt="Hot sauce is poured into the cup of coffee."
+        formats={['webp']}
+        width={1354}
+        type="png"
+      />
+    </div>
+    <div class="about__wrapper-1">
+      <div class="about__title">
+        <Title
+          as="h2"
+          size="xl"
+          text="The story behind the souce"
+        />
+      </div>
+      <div class="about__img-about">
+        <Picture
+          name="woman"
+          alt="Photo woman."
+          formats={['webp']}
+          width={697}
+          type="png"
+        />
+      </div>
+    </div>
+    <div class="about__wrapper-2" id="about">
+      <div class="about__frame">
+        <Picture
+          name="stars-frame"
+          alt="Background-stars."
+          formats={['svg']}
+          width={698}
+          type="svg"
+        />
+      </div>
+      <div class="about__frame">
+        <Picture
+          name="text-frame"
+          alt="Frame."
+          formats={['svg']}
+          width={698}
+          type="svg"
+        />
+      </div>
+      <div class="about__text">
+        <p>HELLO, I’M LAUREN AND AS A LIFELONG ADVENTUROUS EATER, I’VE TRIED A LOT OF CRAZY THINGS, BUT I NEVER THOUGHT HOT SAUCE IN COFFEE WAS A SANE OPTION UNTIL A FRIEND DARED ME TO TRY IT.</p>
+        <p>AND IT SUCKED.</p>
+        <p>BUT I WONDERED IF THERE WAS A WAY TO ADD SPICE TO MY COFFEE. WHEN THERE WAS NO EASY SOLUTION, UJJO WAS BORN.</p>
+        <p>UJJO (OOO-JOE): THE WORD FOR “FIRE” IN KONKANI, SPOKEN ON THE WEST COAST OF INDIA, IS AN HOMAGE AND A LOVE LETTER TO MY DAD, AN INDIAN IMMIGRANT WHO INSTILLED A FIRE IN MY PALATE – AND MY HEART – FROM THE VERY BEGINNING.</p>
+      </div>
+      <div class="about__frame">
+        <Picture
+          name="animals-frame"
+          alt="Frame."
+          formats={['svg']}
+          width={696}
+          type="svg"
+        />
+      </div>
+    </div>
+    <MarqueeReverse reverse={false} />
+  </Container>
+</section>

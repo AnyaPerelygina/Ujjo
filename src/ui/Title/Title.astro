@@ -6,6 +6,7 @@ type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
   className?: string
   mods?: string[]
   size?: 'xl' | 'lg' | 'md' | 'sm' | 'xs' | 'xxs'
+  as: 'h1' | 'h2' | 'h3'
 }
 
 const { as: Tag = 'h1', text, className, size, mods, ...props } = Astro.props

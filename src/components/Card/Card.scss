@@ -1,0 +1,26 @@
+.card {
+  position: absolute;
+  bottom: size(20);
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: size(390);
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: size(14);
+
+  p {
+    font-size: size(18);
+    line-height: size(28);
+    text-transform: uppercase;
+  }
+
+  span {
+    font-size: size(32);
+    line-height: size(38);
+    text-transform: uppercase;
+  }
+}

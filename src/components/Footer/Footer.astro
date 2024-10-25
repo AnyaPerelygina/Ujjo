@@ -1,9 +1,63 @@
 ---
 import Container from '@components/Container/Container'
+import MenuFooter from '@components/Nav/Nav'
+import Picture from '@ui/Picture/Picture'
+
+interface Props {
+  footerLink: {
+    list: {
+      text: string
+      href: string
+    }[]
+  }
+}
+
+const footerLink = {
+  list: [
+    {
+      text: 'privacy',
+      href: '#'
+    },
+    {
+      text: 'ujjo llc, columbus oh, 43219',
+      href: '#'
+    },
+    {
+      text: 'instagram',
+      href: '#'
+    }
+  ]
+}
 ---
 
-<footer class="footer">
+<footer class="footer" id="footer">
   <Container>
-    <p class="footer__text"></p>
+    <div class="footer__img-fire">
+      <Picture
+        name="fire-green"
+        alt="Fire."
+        formats={['svg']}
+        width={1397}
+        type="svg"
+      />
+    </div>
+    <div class="footer__ujjo-big">
+      <div class="footer__ujjo-textBlack">
+        <Picture name="text-ujjo" alt="" width={860} type="svg" />
+      </div>
+      <div class="footer__ujjo-textWhite">
+        <Picture name="text-white-big" alt="" width={815} type="svg" />
+      </div>
+    </div>
+    <div class="footer__frame">
+      <Picture
+        name="frame-big"
+        alt="Frame."
+        formats={['svg']}
+        width={1394}
+        type="svg"
+      />
+    </div>
+    <MenuFooter list={footerLink.list} />
   </Container>
 </footer>

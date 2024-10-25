@@ -13,10 +13,13 @@
     font-family: var(--ff-roboto);
     color: var(--color-white);
     text-transform: uppercase;
+    outline: none;
+    transition: outline $transition, color $transition, background-color $transition;
   }
 
   @include hover-focus {
     background-color: transparent;
+    outline: size(1) solid var(--color-salmon);
 
     .button__text {
       color: var(--color-salmon);

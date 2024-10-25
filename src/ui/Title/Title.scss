@@ -3,4 +3,12 @@
   font-size: size(38);
   line-height: 100%;
   font-weight: 600;
+
+  &--xl {
+    font-size: size(58);
+    line-height: size(66);
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }

@@ -1,6 +1,7 @@
 ---
 import Container from '@components/Container/Container'
 import { Icon } from 'astro-icon/components'
+import Picture from '@ui/Picture/Picture'
 import MarqueeReverse from '@components/Marquee/Marquee'
 import Card from '@components/Card/Card'
 
@@ -63,25 +64,42 @@ const list: Item[] = [
 ]
 ---
 
-<section class="catalog">
+<section class="catalog" id="catalog">
   <Container>
     <div class="catalog__motto">
       <Icon size={225} name="icon-scorpio" />
       <p>Throw some lava in&nbsp;your&nbsp;java</p>
       <Icon size={225} name="icon-scorpio" />
     </div>
-    <div>
+    <div class="catalog__wrapper">
       <div class="catalog__icons">
-        <Icon size={25} name="icon-fire-small" />
-        <Icon size={35} name="icon-fire-big" />
-        <Icon size={35} name="icon-fire-big" />
-        <Icon size={25} name="icon-fire-small" />
+        <div class="catalog__icon">
+          <Icon size={25} name="icon-fire-small" />
+        </div>
+        <div class="catalog__icon">
+          <Icon size={35} name="icon-fire-big" />
+        </div>
+        <div class="catalog__icon">
+          <Icon size={35} name="icon-fire-big" />
+        </div>
+        <div class="catalog__icon">
+          <Icon size={25} name="icon-fire-small" />
+        </div>
       </div>
       <ul class="catalog__list">
         {
           list.map((item) => (
             <li class="catalog__item">
               <Card description={item.description} title={item.title} image={item.image} />
+              <div class="catalog__item-bg">
+                <Picture
+                  name="green-frame"
+                  alt="Зеленый фон."
+                  formats={['svg']}
+                  width={436}
+                  type="svg"
+                />
+              </div>
             </li>
           ))
         }

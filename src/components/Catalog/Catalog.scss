@@ -1,6 +1,11 @@
 .catalog {
   padding: 0 size(20);
 
+  .container {
+    border-right: size(1) solid var(--color-black);
+    border-left: size(1) solid var(--color-black);
+  }
+
   &__motto {
     display: flex;
     flex-direction: row;
@@ -10,9 +15,7 @@
 
     padding: size(65) size(33) size(58);
 
-    border-right: size(1) solid var(--color-black);
     border-bottom: size(1) solid var(--color-black);
-    border-left: size(1) solid var(--color-black);
 
     p {
       font-size: size(65);
@@ -31,9 +34,57 @@
     }
   }
 
+  &__wrapper {
+    position: relative;
+    padding: size(20) 0;
+  }
+
+  &__icons {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 size(20) 0;
+
+    position: absolute;
+    top: size(20);
+    right: 0;
+    left: 0;
+  }
+
+  &__icon {
+    width: size(58);
+    height: size(88);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:first-child {
+      margin-top: size(-15);
+    }
+
+    &:nth-child(3) {
+      margin-left: size(50);
+    }
+
+    &:last-child {
+      margin-top: size(-15);
+    }
+  }
+
   &__list {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: space-between;
+
+    padding: 0 size(20) size(3);
+  }
+
+  &__item {
+    position: relative;
   }
 }

@@ -45,6 +45,10 @@
 
   &__img {
     padding: size(20);
+
+    img {
+      background-color: var(--color-green);
+    }
   }
 
   &__wrapper-right {
