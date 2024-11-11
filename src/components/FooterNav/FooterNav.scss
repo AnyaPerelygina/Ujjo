@@ -1,0 +1,55 @@
+.footer-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  background-color: var(--color-green);
+  border-top: size(1) solid var(--color-black);
+  padding: 0 size(20);
+
+  @include vp-767 {
+    position: unset;
+    border-top: unset;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: size(50);
+    padding: size(20) size(75);
+
+    @include vp-767 {
+      flex-direction: column;
+      padding: size(20) 0;
+      gap: size(20);
+    }
+  }
+
+  &__item {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include vp-767 {
+      &:first-child {
+        margin-bottom: size(50);
+      }
+    }
+  }
+
+  &__link {
+    width: 100%;
+    font-size: size(16);
+    line-height: size(24);
+    text-align: center;
+    text-transform: uppercase;
+
+    @include vp-767 {
+      text-align: end;
+      font-size: size(12);
+      line-height: 1;
+    }
+  }
+}

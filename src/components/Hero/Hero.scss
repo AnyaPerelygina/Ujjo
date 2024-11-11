@@ -11,6 +11,10 @@
     border-right: size(1) solid var(--color-black);
     border-bottom: size(1) solid var(--color-black);
     border-left: size(1) solid var(--color-black);
+
+    @include vp-767 {
+      grid-template-columns: 100%;
+    }
   }
 
   &__wrapper-left {
@@ -20,6 +24,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    @include vp-767 {
+      order: 2;
+
+      .hero__img {
+        border-bottom: none;
+      }
+    }
   }
 
   &__ujjo-small {
@@ -41,10 +53,19 @@
     width: 100%;
     height: 100%;
     padding: size(82) size(70);
+
+    @include vp-767 {
+      padding: size(35) size(30);
+    }
   }
 
   &__img {
     padding: size(20);
+
+    @include vp-767 {
+      padding: size(10);
+      border-bottom: size(1) solid var(--color-black);
+    }
 
     img {
       background-color: var(--color-green);
@@ -60,20 +81,34 @@
     justify-content: space-evenly;
 
     border-left: size(1) solid var(--color-black);
+
+    @include vp-767 {
+      order: 1;
+      border-left: unset;
+    }
   }
 
   &__text {
-    font-size: size(58);
-    line-height: size(66);
-    text-align: center;
-    text-transform: uppercase;
-
     padding: size(24) size(55) size(11);
 
     border-bottom: size(1) solid var(--color-black);
 
+    @include vp-767 {
+      padding: size(20);
+    }
+
     p {
+      font-size: size(58);
+      line-height: size(66);
+      text-align: center;
+      text-transform: uppercase;
       letter-spacing: size(-3);
+
+      @include vp-767 {
+        font-size: size(20);
+        line-height: 1;
+        letter-spacing: 0;
+      }
     }
   }
 }

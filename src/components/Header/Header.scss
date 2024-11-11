@@ -9,6 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    column-gap: size(40);
 
     position: relative;
     border: size(1) solid var(--color-black);

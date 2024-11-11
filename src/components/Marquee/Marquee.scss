@@ -15,11 +15,10 @@
     align-items: center;
     white-space: nowrap;
     column-gap: size(50);
-    padding: size(23) 0;
+    padding: size(23) 0 size(23) size(50);
 
     font-size: size(17);
     line-height: size(26);
-    padding-left: size(50);
     text-transform: uppercase;
 
     animation-name: marquee-moving;
@@ -29,6 +28,12 @@
 
     border-top: size(1) solid var(--color-black);
     border-bottom: size(1) solid var(--color-black);
+
+    @include vp-767 {
+      column-gap: size(30);
+      padding: size(10) 0 size(10) size(30);
+      font-size: size(14);
+    }
   }
 
   &__icon {

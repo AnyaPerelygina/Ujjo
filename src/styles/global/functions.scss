@@ -2,13 +2,24 @@
 // Пропорциональное изменение ширины элемента в зависимости от общей ширины контейнера.
 
 @function adaptive-width($element-width, $container-width, $koeff: 1) {
+  // element-width - ширина элемента из макета.
+  // container-width - доступная ширина контейнера без отступов из макета.
+  // koeff коэффицент скейлинга по пропорции.
   @return calc(($element-width * $koeff / $container-width) * 100%);
 }
 
+// ---------------------------------
+// ❗ Использование скейлинга должно быть согласовано с командой и заказчиком.
+
 @function size-html($viewport, $koeff: 1) {
+  // viewport - переменная вьюпорта макета ($vp-1440 и тд.).
+  // koeff - коэффицент скейлинга.
   @return calc($fz-default / $viewport) * 100vw * $koeff;
 }
 
 @function size($size) {
+  // функция size так же может использоваться отдельно (без size-html).
+  // если нужно использовать значения для шрифта в ремах.
+
   @return calc(($size * 1px) / $fz-default) * 1rem;
 }

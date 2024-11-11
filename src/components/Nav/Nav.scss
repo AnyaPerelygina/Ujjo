@@ -1,4 +1,7 @@
 .nav {
+  width: 100%;
+  max-width: size(963);
+
   &__list {
     display: flex;
     flex-direction: row;
@@ -6,9 +9,28 @@
     gap: size(50);
   }
 
+  &__item {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-child(3) {
+      margin-left: size(214);
+    }
+
+    &:last-child a {
+      padding: size(15) size(48) size(15) size(20);
+    }
+  }
+
   &__link {
-    display: grid;
-    place-content: center;
-    width: size(144);
+    width: fit-content;
+
+    font-size: size(14);
+    line-height: size(21);
+    text-transform: uppercase;
+
+    padding: size(15) size(48);
   }
 }

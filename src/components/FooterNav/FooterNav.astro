@@ -1,0 +1,27 @@
+---
+interface Props {
+  list: {
+    text: string
+    href: string
+  }[]
+}
+
+const { list } = Astro.props
+---
+
+<nav class="footer-nav">
+  <ul class="footer-nav__list">
+    {
+      list.map((item) => (
+        <li class="footer-nav__item">
+          <a
+            href={item.href}
+            set:html={item.text}
+            class="footer-nav__link"
+            data-close-menu
+          />
+        </li>
+      ))
+    }
+  </ul>
+</nav>

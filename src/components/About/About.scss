@@ -7,6 +7,11 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__img {
@@ -16,6 +21,10 @@
 
     img {
       background-color: var(--color-green);
+    }
+
+    @include vp-767 {
+      display: none;
     }
   }
 
@@ -28,11 +37,21 @@
   &__title {
     padding: size(52) size(35) size(42);
     letter-spacing: size(-3);
+
+    @include vp-767 {
+      padding: size(20);
+      letter-spacing: 0;
+    }
   }
 
   &__wrapper-2 {
     position: relative;
     border-left: size(1) solid var(--color-black);
+
+    @include vp-767 {
+      position: unset;
+      border-left: unset;
+    }
   }
 
   &__frame {
@@ -57,6 +76,10 @@
       width: size(694);
       height: size(696);
     }
+
+    @include vp-767 {
+      display: none;
+    }
   }
 
   &__text {
@@ -76,6 +99,18 @@
 
     p {
       text-align: center;
+    }
+
+    @include vp-767 {
+      position: unset;
+      content: unset;
+      transform: unset;
+
+      padding: size(20);
+      max-width: 100%;
+
+      font-size: size(12);
+      line-height: 1.5;
     }
   }
 

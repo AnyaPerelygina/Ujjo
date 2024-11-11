@@ -10,5 +10,10 @@
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
+
+    @include vp-767 {
+      font-size: size(20);
+      line-height: 1;
+    }
   }
 }
