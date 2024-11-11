@@ -2,6 +2,10 @@
   width: 100%;
   padding: 0 size(20);
 
+  @include vp-767 {
+    padding: 0 size(10);
+  }
+
   .container {
     border-right: size(1) solid var(--color-black);
     border-bottom: size(1) solid var(--color-black);

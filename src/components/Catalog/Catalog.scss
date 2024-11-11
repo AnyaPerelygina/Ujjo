@@ -1,6 +1,10 @@
 .catalog {
   padding: 0 size(20);
 
+  @include vp-767 {
+    padding: 0 size(10);
+  }
+
   .container {
     border-right: size(1) solid var(--color-black);
     border-left: size(1) solid var(--color-black);
@@ -87,7 +91,7 @@
       top: size(13);
 
       height: 100%;
-      max-height: size(1212);
+      max-height: size(1280);
     }
   }
 
@@ -113,12 +117,18 @@
       }
     }
 
+    &:nth-child(2) {
+      @include vp-767 {
+        margin-top: size(15);
+      }
+    }
+
     &:nth-child(3) {
       margin-left: size(50);
 
       @include vp-767 {
         margin-left: unset;
-        margin-top: size(14);
+        margin-top: size(15);
       }
     }
 
@@ -156,7 +166,7 @@
     align-items: flex-end;
 
     @include vp-767 {
-      height: size(370);
+      height: size(391);
     }
   }
 

@@ -2,6 +2,10 @@
   width: 100%;
   max-width: size(963);
 
+  @include vp-767 {
+    display: none;
+  }
+
   &__list {
     display: flex;
     flex-direction: row;
