@@ -34,7 +34,8 @@
 
     @include vp-767 {
       &:first-child {
-        margin-bottom: size(50);
+        order: 2;
+        margin-top: size(50);
       }
     }
   }

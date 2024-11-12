@@ -3,7 +3,7 @@
   padding: 0 size(20);
 
   @include vp-767 {
-    padding: 0 size(10);
+    padding: size(63) size(10) 0 size(10);
   }
 
   .container {
@@ -18,6 +18,7 @@
 
     @include vp-767 {
       grid-template-columns: 100%;
+      border-top: size(1) solid var(--color-black);
     }
   }
 

@@ -3,6 +3,7 @@ import Container from '@components/Container/Container'
 import Button from '@ui/Button/Button'
 import Logo from '@components/Logo/Logo'
 import Menu from '@components/Nav/Nav'
+import { Icon } from 'astro-icon/components'
 
 interface Props {
   navList: {
@@ -35,12 +36,16 @@ const navList = {
 }
 ---
 
-<header class="header">
+<header class="header" data-header="sticky" data-fix-block="data-fix-block">
   <Container>
     <Button class="header__button" text="Buy" />
     <div class="header__logo">
       <Logo />
     </div>
+    <button class="header__toggle toggle" type="button" aria-label="Открыть меню.">
+      <Icon class="toggle__opened" size={36} name="icon-hot-paper" />
+      <Icon class="toggle__closed" size={24} name="icon-close" />
+    </button>
     <Menu list={navList.list} />
     <Button class="header__button" text="Buy" />
   </Container>
