@@ -83,6 +83,7 @@
       display: block;
       background-color: transparent;
       width: fit-content;
+      height: fit-content;
       border-radius: 50%;
       border: size(1) solid var(--color-black);
       padding: size(5) size(7);
@@ -165,9 +166,7 @@
 
     display: grid;
     place-content: end;
-    width: 100%;
-    height: fit-content;
-    padding: min(size(20), 4vh) 0 0;
+    margin: min(size(20), 4vh) 0 0 auto;
   }
 
   .toggle__closed {
