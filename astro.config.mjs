@@ -28,7 +28,6 @@ let svgoPrefixIdsCount = 0
 export default defineConfig({
   devToolbar: { enabled: false },
   site: 'https://anyaperelygina.github.io/',
-  base: 'Ujjo',
   compressHTML: false,
   output: 'static',
   publicDir: './public',
