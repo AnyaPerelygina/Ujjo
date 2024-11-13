@@ -43,18 +43,21 @@
 
 .nav__list.is-opened {
   flex-direction: column;
-  gap: size(10);
+  gap: min(size(10), 2vh);
 
   .nav__item:nth-child(3) {
     margin: 0;
   }
 
   .nav__item:last-child a {
-    padding: size(15) 0;
+    padding: min(size(15), 3vh) 0;
   }
 
   .nav__link {
+    font-size: min(size(14), 3vh);
+    line-height: 1;
+
     width: 100%;
-    padding: size(15) 0;
+    padding: min(size(15), 3vh) 0;
   }
 }
