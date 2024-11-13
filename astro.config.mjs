@@ -27,7 +27,8 @@ let svgoPrefixIdsCount = 0
 // https://astro.build/config
 export default defineConfig({
   devToolbar: { enabled: false },
-  site: 'https://htmlonelove.github.io',
+  site: 'https://anyaperelygina.github.io/',
+  base: 'Ujjo',
   compressHTML: false,
   output: 'static',
   publicDir: './public',
