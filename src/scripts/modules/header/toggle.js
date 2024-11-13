@@ -62,6 +62,14 @@ const addToggleMenu = () => {
     }
   }
 
+  const handleResize = () => {
+    if (window.innerWidth >= 768) {
+      closeMenu()
+    }
+  }
+
+  window.addEventListener('resize', handleResize)
+
   toggle.addEventListener('click', () => {
     return !toggle.classList.contains(OPENED_CLASS) ? openMenu() : closeMenu()
   })

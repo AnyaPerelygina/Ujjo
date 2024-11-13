@@ -126,6 +126,10 @@
   display: none;
 }
 
+.toggle__opened {
+  color: var(--color-black);
+}
+
 .header.is-opened {
   height: 100%;
 
@@ -168,6 +172,7 @@
 
   .toggle__closed {
     display: block;
+    color: var(--color-black);
 
     width: min(size(24), 5vh);
     height: min(size(24), 5vh);
@@ -187,7 +192,7 @@
 
     .button__text {
       font-size: min(size(14), 3vh);
-      line-height: 1;
+      line-height: 2;
     }
   }
 
