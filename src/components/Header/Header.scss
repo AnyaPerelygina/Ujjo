@@ -7,7 +7,7 @@
 
     width: 100%;
     background-color: var(--color-white);
-    height: auto;
+    height: 0;
     transition: height $transition;
 
     position: fixed;
@@ -15,6 +15,21 @@
     left: 0;
     z-index: 2;
     width: 100%;
+
+    &::before {
+      content: "";
+      position: fixed;
+      z-index: 1;
+      background-color: var(--color-white);
+      opacity: 1;
+      inset: 0;
+      transform: scale(1);
+      border: size(1) solid var(--color-black);
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+      transition: height $transition opacity $transition visibility $transition;
+    }
   }
 
   .container {
@@ -115,14 +130,9 @@
   height: 100%;
 
   &::before {
-    content: "";
-    position: fixed;
-    z-index: 1;
-    background-color: var(--color-white);
     opacity: 1;
-    inset: 0;
-    transform: scale(1);
-    border: size(1) solid var(--color-black);
+    visibility: visible;
+    height: 100%;
   }
 
   .container {
@@ -158,6 +168,7 @@
 
   .toggle__closed {
     display: block;
+
     width: min(size(24), 5vh);
     height: min(size(24), 5vh);
   }

@@ -1,3 +1,5 @@
+import { initanimationMenu, animanionMenuClose, animanionMenuOpen } from './animation-menu'
+
 const addToggleMenu = () => {
   const OPENED_CLASS = 'is-opened'
   const LINK_CLASS = '.nav__link'
@@ -28,18 +30,27 @@ const addToggleMenu = () => {
     document.body.style.overflow = 'hidden'
     window.scrollLock.disableScrolling()
     document.addEventListener('click', onDocumentOutside)
+
+    initanimationMenu()
+
+    setTimeout(() => {
+      animanionMenuOpen()
+    }, 300)
   }
 
   const closeMenu = () => {
-    root.classList.remove(OPENED_CLASS)
-    toggle.classList.remove(OPENED_CLASS)
-    nav.classList.remove(OPENED_CLASS)
-    document.removeEventListener('keydown', onDocumentKeydown)
-    nav.removeEventListener('click', onLinkClick)
-    document.removeEventListener('click', isMenu)
-    document.body.style.overflow = ''
-    window.scrollLock.enableScrolling()
-    document.removeEventListener('click', onDocumentOutside)
+    animanionMenuClose()
+    setTimeout(() => {
+      root.classList.remove(OPENED_CLASS)
+      toggle.classList.remove(OPENED_CLASS)
+      nav.classList.remove(OPENED_CLASS)
+      document.removeEventListener('keydown', onDocumentKeydown)
+      nav.removeEventListener('click', onLinkClick)
+      document.removeEventListener('click', isMenu)
+      document.body.style.overflow = ''
+      window.scrollLock.enableScrolling()
+      document.removeEventListener('click', onDocumentOutside)
+    }, 1000)
   }
 
   const onDocumentOutside = (evt) => {
